@@ -1,6 +1,8 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Runtime.ConstrainedExecution;
 using System;
+using System.Xml.Linq;
+using System.Diagnostics.CodeAnalysis;
 
 namespace csharp_typesystem_snacks
 {
@@ -134,7 +136,7 @@ namespace csharp_typesystem_snacks
             //SNACK 8
             //Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
 
-            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            /*int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             int sum = 0;
             for (int i = 0; i < numbers.Length; i++)
             {
@@ -143,7 +145,36 @@ namespace csharp_typesystem_snacks
                     sum += numbers[i];
                 }
             }
-            Console.WriteLine($"La somma dei numeri in posizione dispari del tuo array è: {sum}");
+            Console.WriteLine($"La somma dei numeri in posizione dispari del tuo array è: {sum}");*/
+
+            //Snack 9
+            //Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
+
+            int[] numbers = new int[10];
+            int sum = 0;
+            Console.WriteLine($"Inserisci un massimo di {numbers.Length} numeri affinchè la somma di essi superi 50");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (sum < 50) 
+                {
+                    int newNumber = Convert.ToInt32(Console.ReadLine());
+                    numbers[i] = newNumber;
+                    sum += numbers[i];
+                }
+                else
+                {
+                    break;
+                }
+            }
+            if( sum < 50)
+            {
+                Console.WriteLine($"Oh no mi dispiace! La somma dei tuoi numeri è {sum}. Non sei stato abbastanza bravo da raggiungere 50 :(");
+            }
+            else
+            {
+                Console.WriteLine($"Complimenti ce l'hai fatta! La somma dei tuoi numeri è {sum}");
+            }
+
         }
     }
 }
