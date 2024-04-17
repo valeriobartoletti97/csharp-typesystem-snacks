@@ -71,7 +71,7 @@ namespace csharp_typesystem_snacks
             //SNACK 4
             //Calcola la somma e la media dei numeri da 2 a 10.
 
-            int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            /*int[] numbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int sum = 0;
             foreach(int i in numbers)
             {
@@ -79,8 +79,21 @@ namespace csharp_typesystem_snacks
             }
             Console.WriteLine($"La somma dei numeri da 2 a 10 è : {sum}");
             float numAverage = sum / numbers.Length;
-            Console.WriteLine($"La media aritmetica dei numeri da 2 a 10 è : {numAverage}");
+            Console.WriteLine($"La media aritmetica dei numeri da 2 a 10 è : {numAverage}");*/
 
+
+            //SNACK 5 
+            //Il software chiede all’utente di inserire un numero.Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+
+            Console.WriteLine("Inserisci un numero:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (number % 2 == 0)
+            {
+                Console.WriteLine($"Il numero inserito è {number}");
+            } else
+            {
+                Console.WriteLine($"Il numero successivo al numero inserito è {number + 1}");
+            }
         }
     }
 }
