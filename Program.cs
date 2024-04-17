@@ -1,5 +1,6 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Runtime.ConstrainedExecution;
+using System;
 
 namespace csharp_typesystem_snacks
 {
@@ -85,7 +86,7 @@ namespace csharp_typesystem_snacks
             //SNACK 5 
             //Il software chiede all’utente di inserire un numero.Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
 
-            Console.WriteLine("Inserisci un numero:");
+            /*Console.WriteLine("Inserisci un numero:");
             int number = Convert.ToInt32(Console.ReadLine());
             if (number % 2 == 0)
             {
@@ -93,6 +94,20 @@ namespace csharp_typesystem_snacks
             } else
             {
                 Console.WriteLine($"Il numero successivo al numero inserito è {number + 1}");
+            }*/
+
+            //SNACK 6
+            //In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+
+            string[] guests = { "Andrea", "Davide", "Valerio", "Oder", "Mirko", "Massimiliano" };
+            Console.WriteLine("Inserisci il tuo nome:");
+            string myName = Console.ReadLine();
+            if (guests.Contains(char.ToUpper(myName[0]) + myName.Substring(1)))
+            {
+                Console.WriteLine("Benvenuto, lei è nella lista degli invitati! Entri pure..");
+            } else
+            {
+                Console.WriteLine("Mi dispiace ma non sei stato invitato. Tornatene pure a casa. Grazie");
             }
         }
     }
