@@ -99,7 +99,7 @@ namespace csharp_typesystem_snacks
             //SNACK 6
             //In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
 
-            string[] guests = { "Andrea", "Davide", "Valerio", "Oder", "Mirko", "Massimiliano" };
+            /*string[] guests = { "Andrea", "Davide", "Valerio", "Oder", "Mirko", "Massimiliano" };
             Console.WriteLine("Inserisci il tuo nome:");
             string myName = Console.ReadLine();
             if (guests.Contains(char.ToUpper(myName[0]) + myName.Substring(1)))
@@ -108,6 +108,27 @@ namespace csharp_typesystem_snacks
             } else
             {
                 Console.WriteLine("Mi dispiace ma non sei stato invitato. Tornatene pure a casa. Grazie");
+            }*/
+
+            //SNACK 7 
+            //Crea un array vuoto.
+            //Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+
+            int[] numbers = new int[6];
+            for( int i = 0; i < numbers.Length; i++ )
+            {
+                Console.WriteLine("Inserisci un numero: ");
+                int newNumber = Convert.ToInt32(Console.ReadLine());
+                if(newNumber % 2 != 0)
+                {
+                    numbers[i] = newNumber;
+                } 
+            }
+            Console.WriteLine("Attenzione!! I numeri pari da te inseriti sono stati valutati come 0");
+            Console.WriteLine("I numeri inseriti sono:");
+            foreach( int number in numbers )
+            {
+                Console.WriteLine(number);
             }
         }
     }
