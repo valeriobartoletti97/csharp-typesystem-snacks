@@ -1,10 +1,13 @@
-﻿namespace csharp_typesystem_snacks
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.ConstrainedExecution;
+
+namespace csharp_typesystem_snacks
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //Snack 1
+            //SNACK 1 
             //L’utente inserisce due numeri in successione.
             //Il software stampa il maggiore.
 
@@ -27,11 +30,11 @@
                 Console.WriteLine("I numeri sono uguali");
             } */
 
-            //Snack 2
+            //SNACK 2 
             //L’utente inserisce due parole in successione.
             //Il software stampa prima la parola più corta, poi la parola più lunga.
 
-            Console.WriteLine("Inserisci una parola");
+            /*Console.WriteLine("Inserisci una parola");
             string word1 = Console.ReadLine();
             Console.WriteLine("Inserisci una seconda parola");
             string word2 = Console.ReadLine();
@@ -49,7 +52,21 @@
             else
             {
                 Console.WriteLine("Le parole hanno la stessa lunghezza");
+            }*/
+
+            //SNACK 3 
+            //Il software deve chiedere per 10 volte all’utente di inserire un numero.
+            //Il programma stampa la somma di tutti i numeri inseriti.
+
+            int[] numbers = new int[10];
+            int sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine("Inserisci un numero");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
+                sum += numbers[i];
             }
+            Console.WriteLine($"La somma dei tuoi numeri è {sum}");
         }
     }
 }
