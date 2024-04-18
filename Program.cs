@@ -81,7 +81,7 @@ namespace csharp_typesystem_snacks
                 sum += i;
             }
             Console.WriteLine($"La somma dei numeri da 2 a 10 è : {sum}");
-            float numAverage = sum / numbers.Length;
+            float numAverage = (decimal)sum / numbers.Length;
             Console.WriteLine($"La media aritmetica dei numeri da 2 a 10 è : {numAverage}");*/
 
 
@@ -189,7 +189,7 @@ namespace csharp_typesystem_snacks
                 Random rnd = new Random();
                 for(int j= 0; j < newArray.Length; j++)
                 {
-                    newArray[j] = rnd.Next(1,100);
+                    newArray[j] = rnd.Next(1,101);
                 }
                 Console.WriteLine($"Array numero {i + 1}:");
                 for(int z= 0; z < newArray.Length; z++)
